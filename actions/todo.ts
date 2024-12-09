@@ -38,6 +38,10 @@ export async function GetTodo() {
       where: {
         userId,
       },
+      // order by created_at in descending order
+      orderBy: {
+        created_at: "desc",
+      },
     });
 
     return { todo };
